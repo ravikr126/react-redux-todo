@@ -1,6 +1,7 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { filterTodos, markAllCompleted } from '../redux/actions';
+//here i use functional component
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { filterTodos, markAllCompleted } from "../redux/actions";
 
 const FilterButtons = () => {
   const dispatch = useDispatch();
@@ -17,9 +18,9 @@ const FilterButtons = () => {
         value={currentFilter}
         onChange={(e) => handleFilter(e.target.value)}
       >
-        <option value="ALL">Default</option>
-        <option value="COMPLETED">Completed</option>
-        <option value="INCOMPLETE">Incomplete</option>
+        <option value="ALL">Show all Tasks</option>
+        <option value="COMPLETED">Show completed Tasks</option>
+        <option value="INCOMPLETE">Show Active Tasks</option>
       </select>
 
       <button

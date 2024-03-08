@@ -1,33 +1,49 @@
-import { useSelector } from "react-redux";
+//here i use class component with life cycle method 
+
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
-  const filteredTodos = useSelector((state) => {
-    const todos = state.todos;
-    const filter = state.filter;
-    const searchTerm = state.searchTerm.toLowerCase(); // Convert search term to lowercase for case-insensitive search
+class TodoList extends Component {
+  componentDidMount() {
+    console.log("TodoList component mounted");
+  }
 
-    return todos.filter((todo) => {
-      const matchesFilter = (filter === 'COMPLETED' && todo.completed) ||
-        (filter === 'INCOMPLETE' && !todo.completed) ||
-        filter === 'ALL';
+  componentWillUnmount() {
+    console.log("TodoList component will unmount");
+  }
+
+  render() {
+    const { todos, filter, searchTerm } = this.props;
+
+    const filteredTodos = todos.filter((todo) => {
+      const matchesFilter =
+        (filter === "COMPLETED" && todo.completed) ||
+        (filter === "INCOMPLETE" && !todo.completed) ||
+        filter === "ALL";
 
       const matchesSearch = todo.text.toLowerCase().includes(searchTerm);
 
       return matchesFilter && matchesSearch;
     });
-  });
 
-  console.log('Filtered Todos:', filteredTodos);
+    console.log("Filtered Todos:", filteredTodos);
 
-  return (
-    <ul>
-      <li className="my-2 text-sm italic">All Your Notes Here...</li>
-      {filteredTodos.map((todo, index) => (
-        <TodoItem key={index} todo={todo} index={index} />
-      ))}
-    </ul>
-  );
-};
+    return (
+      <ul>
+        <li className="my-2 text-sm italic">All Your Notes Here...</li>
+        {filteredTodos.map((todo, index) => (
+          <TodoItem key={index} todo={todo} index={index} />
+        ))}
+      </ul>
+    );
+  }
+}
 
-export default TodoList;
+const mapStateToProps = (state) => ({
+  todos: state.todos,
+  filter: state.filter,
+  searchTerm: state.searchTerm.toLowerCase(),
+});
+
+export default connect(mapStateToProps)(TodoList);
