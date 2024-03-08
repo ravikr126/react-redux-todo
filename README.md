@@ -37,13 +37,14 @@ Follow these steps to run the Todo List App locally:
    ```bash
    git clone https://github.com/ravikr126/react-redux-todo.git
 
+2. **Move to code directory**:
    ```bash
    cd react-redux-todo
 
-2. **Install Dependencies**:
+3. **Install Dependencies**:
    ``` bash
    npm install
-3. **Run the App**:
+4. **Run the App**:
    ```bash
    npm run dev
    
