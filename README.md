@@ -2,6 +2,9 @@
 
 Welcome to the Todo List App! This simple application helps you manage your tasks efficiently. Keep track of your to-dos and stay organized with ease.
 
+# Screenshot
+![Screenshot (37)](https://github.com/ravikr126/react-redux-todo/assets/53082978/2a40d1ab-d09d-4eac-a805-503a6185e828)
+
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
@@ -20,6 +23,19 @@ Welcome to the Todo List App! This simple application helps you manage your task
   - `src/redux/reducer.js`
   - `src/redux/store.js`
 
+- **Persisting Data on Reload:**
+  - The application is designed to persist data even when the page is reloaded. This ensures a seamless user experience, and the data remains intact across sessions.
+
+- **Redux for Global State Management:**
+  - Redux is utilized for global state management in the application. It helps maintain a centralized state, making it easier to manage and share data across different components.
+
+- **Organized Folder Structure:**
+  - The project follows an organized folder structure to enhance code readability and maintainability. Key components and functionality are placed in logical directories for easy navigation.
+
+- **Mobile Responsiveness:**
+  - The application is designed to be responsive on mobile devices, ensuring a consistent and user-friendly experience across various screen sizes.
+
+These features collectively contribute to a robust and user-centric application.
 Feel free to explore the codebase to see how I've leveraged both approaches to create a well-rounded React application.
 
 
