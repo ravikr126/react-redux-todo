@@ -1,5 +1,4 @@
-//here i use functional component 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import TodoList from "./TodoList";
 import FilterButtons from "./FilterButtons";
@@ -12,6 +11,18 @@ const Todo = () => {
   const dispatch = useDispatch();
   const [newTodoText, setNewTodoText] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Load todos from localStorage on component mount
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    // Dispatching directly without using setTodos action
+    dispatch({ type: 'SET_TODOS', payload: { todos: storedTodos } });
+  }, [dispatch]);
+
+  // Save todos to localStorage whenever todos change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleAddTodo = (text) => {
     dispatch(addTodo(text));
