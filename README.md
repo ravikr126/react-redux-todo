@@ -8,6 +8,21 @@ Welcome to the Todo List App! This simple application helps you manage your task
 - **Redux**: A predictable state container for managing the application's state.
 - **Vite**: A fast and efficient front-end build tool for React applications.
 
+## Important Note
+
+- In this project, I've demonstrated my proficiency in both functional and class component development, showcasing my versatility in React programming.
+
+- The functional components can be found in the following files:
+  - `src/redux/actions.js`
+  - `src/redux/actionTypes.js`
+
+- The class components with lifecycle methods are located in:
+  - `src/redux/reducer.js`
+  - `src/redux/store.js`
+
+Feel free to explore the codebase to see how I've leveraged both approaches to create a well-rounded React application.
+
+
 ## Dependencies
 
 - **redux**: State management library for React applications.
