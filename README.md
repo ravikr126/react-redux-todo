@@ -25,6 +25,10 @@ Welcome to the Todo List App! This simple application helps you manage your task
 
 - **Persisting Data on Reload:**
   - The application is designed to persist data even when the page is reloaded. This ensures a seamless user experience, and the data remains intact across sessions.
+  - # Important Note about Data Persistence
+      - The current implementation relies on *local storage* for persisting data, allowing the preservation of to-do items when the application is reloaded. However, it's essential to note that this data persistence feature is only available when running the website on your local system.
+      - When hosted on a server or deployed to platforms like Vercel, data may not persist between reloads as each session is treated independently. To enable persistent data across different sessions, consider implementing a backend solution with database integration.
+      - Please be aware that the current setup does not utilize redux-thunk (as I explore the data persistence method)for handling asynchronous operations. If encounter difficulties in data persistence, exploring *redux-thunk* or other *backend solutions* may provide the desired functionality.
 
 - **Redux for Global State Management:**
   - Redux is utilized for global state management in the application. It helps maintain a centralized state, making it easier to manage and share data across different components.
