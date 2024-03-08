@@ -5,6 +5,12 @@ Welcome to the Todo List App! This simple application helps you manage your task
 # Screenshot
 ![Screenshot (37)](https://github.com/ravikr126/react-redux-todo/assets/53082978/2a40d1ab-d09d-4eac-a805-503a6185e828)
 
+# Video Demo
+
+
+https://github.com/ravikr126/react-redux-todo/assets/53082978/9d3c3f19-942f-42e8-b5ac-02c38db7ab57
+
+
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
